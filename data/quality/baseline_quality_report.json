@@ -1,0 +1,48 @@
+{
+  "stage": "baseline",
+  "success": true,
+  "gx_success": true,
+  "row_count": 24,
+  "checks": [
+    {
+      "name": "row_count",
+      "success": true
+    },
+    {
+      "name": "paper_id_not_null",
+      "success": true
+    },
+    {
+      "name": "title_not_null",
+      "success": true
+    },
+    {
+      "name": "text_for_embedding_not_null",
+      "success": true
+    },
+    {
+      "name": "paper_id_unique",
+      "success": true
+    },
+    {
+      "name": "summary_length",
+      "success": true
+    }
+  ],
+  "missing_columns": [],
+  "empty_values": {
+    "paper_id": 0,
+    "title": 0,
+    "text_for_embedding": 0
+  },
+  "freshness": {
+    "threshold_days": 180,
+    "max_stale_ratio": 0.25,
+    "stale_rows": 0,
+    "total_rows": 24,
+    "stale_ratio": 0.0,
+    "is_fresh": true,
+    "latest_published": "2026-09-15",
+    "oldest_published": "2026-04-01"
+  }
+}

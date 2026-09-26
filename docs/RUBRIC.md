@@ -1,5 +1,20 @@
 # TIÊU CHÍ CHẤM ĐIỂM (RUBRIC): DAY 10 - DATA PIPELINE & DATA OBSERVABILITY
 
+**Đối chiếu bài làm:** Nhóm **solo** — Trần Quốc Vượng (**2A202602522**). Bảng dưới đây chỉ dẫn đến bằng chứng thực tế; đây không phải điểm do giảng viên chấm.
+
+| Tiêu chí | Bằng chứng tại repository | Giới hạn xác minh |
+| --- | --- | --- |
+| 1. Môi trường | [pyproject.toml](../pyproject.toml), [README](../README.md), 12 test đã qua | Chưa kiểm tra lại trên máy chấm |
+| 2. Ingestion/lineage | [Crossref parser](../src/ingestion/crossref.py), [API snapshot](../data/raw/crossref_response.json), [raw records](../data/raw/crossref_records.json) | 24 bản ghi ở lần chạy hiện tại |
+| 3. Cleaning | [cleaning.py](../src/ingestion/cleaning.py), [papers_clean.csv](../data/clean/papers_clean.csv) | 24 dòng sạch ở lần chạy hiện tại |
+| 4. Embedding/index | [index.py](../src/retrieval/index.py), [embedding manifest](../data/embeddings/papers_embeddings.json) | Baseline index có 24 bản ghi theo báo cáo |
+| 5. QA Agent | [QA code](../src/retrieval/qa.py), [LLM router](../src/retrieval/llm.py) | Chưa kiểm chứng các provider có yêu cầu API key |
+| 6. Baseline evaluation | [test_set.json](../data/eval/test_set.json), [baseline metrics](../data/results/baseline_metrics.json) | Benchmark nêu đúng tiêu đề; judge dùng heuristic |
+| 7. Observability | [quality.py](../src/observability/quality.py), [quality report](../data/quality/baseline_quality_report.json) | Baseline PASS, corrupted FAIL, repaired PASS |
+| 8. Corruption/repair | [corruption.py](../src/ingestion/corruption.py), [comparison report](../data/reports/corruption_report.md) | Sáu lỗi tiêm đồng thời, chưa tách tác động từng lỗi |
+
+Chưa tự nhận các mục điểm thưởng; dashboard, coverage trên 80% và CI chưa có bằng chứng tương ứng.
+
 > **Tổng điểm chuẩn:** 100 điểm (bắt buộc)  
 > **Điểm thưởng tối đa (Bonus):** 10 điểm (vượt chuẩn)  
 > **Điểm tối đa có thể đạt:** 110/100 điểm  

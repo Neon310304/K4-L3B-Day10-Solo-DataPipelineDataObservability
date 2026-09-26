@@ -5,4 +5,8 @@ lab.txt
 src/*.egg-info/
 lab/
 **/__pycache__/
+.pytest_cache/
+chroma_db/
+data/chroma/*
+!data/chroma/.gitkeep
 doc_verification_report.md

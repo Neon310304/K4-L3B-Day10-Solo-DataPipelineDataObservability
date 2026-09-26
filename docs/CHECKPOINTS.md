@@ -1,5 +1,17 @@
 # CHECKPOINTS: DAY 10 - DATA PIPELINE & DATA OBSERVABILITY
 
+**Thông tin bài làm:** Nhóm **solo** — Trần Quốc Vượng (**2A202602522**). Trạng thái dưới đây được đối chiếu với artifact trong repository; mốc thời gian trong hướng dẫn là thời lượng gợi ý, không phải thời gian thực tế đã đo.
+
+| Checkpoint | Trạng thái tại workspace | Bằng chứng |
+| --- | --- | --- |
+| CP0 | Môi trường và 24 raw records đã có; khóa Google chưa cấu hình | [Raw records](../data/raw/crossref_records.json) |
+| CP1 | 24 dòng sạch; GX và freshness baseline PASS | [Clean CSV](../data/clean/papers_clean.csv), [quality](../data/quality/baseline_quality_report.json) |
+| CP2 | 10 câu hỏi, 24 bản ghi baseline được lập chỉ mục | [Test set](../data/eval/test_set.json), [báo cáo Phase 1](../data/reports/phase1_report.md) |
+| CP3 | Pipeline baseline đã chạy, Hit Rate 100%, Token F1 1,000 | [Baseline metrics](../data/results/baseline_metrics.json) |
+| CP4 | Đã tiêm sáu lỗi; Hit Rate và Token F1 còn 60% và 0,600 | [Corruption log](../data/results/corruption_log.json), [corrupted metrics](../data/results/corrupted_metrics.json) |
+| CP5 | Phục hồi 24 dòng, quality PASS, metrics trở về baseline | [Báo cáo đối chiếu](../data/reports/corruption_report.md) |
+| CP6 | Tài liệu và artifact đã chuẩn bị; demo/LMS chưa có xác nhận | [Báo cáo dự án](../report/group_report.md), [checklist](SUBMISSION.md) |
+
 > **Tổng thời lượng thực chiến:** 240 phút (4 giờ)  
 > **Hình thức:** Làm việc theo nhóm (Teamwork)  
 > **Bộ dữ liệu chuẩn:** Crossref Metadata API (hoặc Local Snapshot `data/raw/crossref_response.json`)  

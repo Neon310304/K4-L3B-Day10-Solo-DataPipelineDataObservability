@@ -1,5 +1,9 @@
 # Nội Quy, Hướng Dẫn Nộp Bài & Checklist Nghiệm Thu
 
+**Thông tin bài làm:** Nhóm **solo** — Trần Quốc Vượng, mã học viên **2A202602522**. Repository hiện tại: [K4-L3B-Day10-Solo-DataPipelineDataObservability](https://github.com/Neon310304/K4-L3B-Day10-Solo-DataPipelineDataObservability). [Thông tin và phân công](TEAM.md); [báo cáo dự án](../report/group_report.md); [báo cáo cá nhân](../report/2A202602522_TranQuocVuong.md).
+
+Các quy định dưới đây là nội dung hướng dẫn của bài lab; phần checklist cuối tài liệu phản ánh trạng thái kiểm chứng tại workspace, không thay thế xác nhận nộp bài trên LMS.
+
 > ⚠️ **QUY ĐỊNH BẮT BUỘC:**  
 > Dù bài lab làm theo nhóm, **MỖI CÁ NHÂN ĐỀU PHẢI TỰ NỘP ĐƯỜNG LINK REPO LÊN VLEARN LMS** từ tài khoản cá nhân.  
 > Thành viên nào không nộp link → hệ thống ghi nhận **0 điểm**.
@@ -69,6 +73,7 @@ K4-L3B-DAY10-TenNhom-DataPipelineDataObservability/
 ├── script/               ← run_phase1.py, run_corruption_flow.py
 ├── src/                  ← Code hoàn thiện: core/, ingestion/, retrieval/, evaluation/, observability/
 ├── report/               ← group_report.md + <MSSV>_HoTen.md (báo cáo cá nhân)
+├── reports/              ← individual_2A202602522_TranQuocVuong.md (đường dẫn theo Bước 9)
 ├── docs/                 ← CHECKPOINTS.md, RUBRIC.md, SUBMISSION.md, TEAM.md
 ├── README.md
 └── .env.example
@@ -78,11 +83,12 @@ K4-L3B-DAY10-TenNhom-DataPipelineDataObservability/
 
 ## 8. Checklist Trước Khi Nộp Link Lên VLearn
 
-- [ ] `python script/run_phase1.py` chạy exit code 0
-- [ ] `python script/run_corruption_flow.py` chạy exit code 0
-- [ ] `data/reports/corruption_report.md` có bảng đối chiếu Baseline vs Corrupted vs Repaired
-- [ ] Có đủ `baseline_metrics.json`, `corrupted_metrics.json`, `repaired_metrics.json`
-- [ ] `TEAM.md` điền đầy đủ họ tên, MSSV, phần tự khai cá nhân
-- [ ] Không commit `.env` lên GitHub
-- [ ] Tab **Insights → Contributors** trên GitHub: 100% thành viên có commit trên `main`
-- [ ] Mỗi cá nhân nộp link repo lên VLearn LMS trước 23:59:59
+- [x] `python script/run_phase1.py` đã chạy, sinh [báo cáo Phase 1](../data/reports/phase1_report.md).
+- [x] `python script/run_corruption_flow.py` đã chạy, sinh [báo cáo đối chiếu](../data/reports/corruption_report.md).
+- [x] Báo cáo có bảng Baseline vs Corrupted vs Repaired.
+- [x] Có đủ [baseline](../data/results/baseline_metrics.json), [corrupted](../data/results/corrupted_metrics.json), [repaired](../data/results/repaired_metrics.json) metrics.
+- [x] [TEAM.md](TEAM.md) có tên, mã học viên, phạm vi và bảng tỷ lệ đóng góp 100%; email chưa được cung cấp.
+- [x] Đã tạo [báo cáo cá nhân theo Bước 9](../reports/individual_2A202602522_TranQuocVuong.md). Repository không có `reports/TEMPLATE_individual.md`; nội dung dựa trên báo cáo hoàn chỉnh trong `report/`.
+- [x] `.env` không nằm trong danh sách file được Git theo dõi tại workspace hiện tại; không đưa khóa vào commit.
+- [ ] Xác nhận commit cuối đã được push lên `main` và xuất hiện tại **Insights → Contributors** trước khi nộp link.
+- [ ] Chưa có bằng chứng xác nhận đã nộp link repository lên VLearn LMS.
