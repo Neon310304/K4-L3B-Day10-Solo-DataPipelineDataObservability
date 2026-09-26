@@ -90,5 +90,5 @@ K4-L3B-DAY10-TenNhom-DataPipelineDataObservability/
 - [x] [TEAM.md](TEAM.md) có tên, mã học viên, phạm vi và bảng tỷ lệ đóng góp 100%; email chưa được cung cấp.
 - [x] Đã tạo [báo cáo cá nhân theo Bước 9](../reports/individual_2A202602522_TranQuocVuong.md). Repository không có `reports/TEMPLATE_individual.md`; nội dung dựa trên báo cáo hoàn chỉnh trong `report/`.
 - [x] `.env` không nằm trong danh sách file được Git theo dõi tại workspace hiện tại; không đưa khóa vào commit.
-- [ ] Xác nhận commit cuối đã được push lên `main` và xuất hiện tại **Insights → Contributors** trước khi nộp link.
+- [x] Commit bài làm đã được push lên `main`; GitHub API xác nhận repository ở chế độ **Public**. Kiểm tra **Insights → Contributors** nếu cần đối chiếu tài khoản.
 - [ ] Chưa có bằng chứng xác nhận đã nộp link repository lên VLearn LMS.
